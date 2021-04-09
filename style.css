@@ -1,0 +1,62 @@
+/*** GLOBALS ***/
+
+:root {
+  --dark: #1f2109;
+  --light: #595b46;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  background-color: var(--white);
+}
+
+h1 {
+  color: var(--white);
+  font-family: semplicitapro, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h2 {
+  color: var(--white);
+  font-family: grad, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  color: var(--white);
+  font-family: semplicitapro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+/***************************************/
+/***            HEADER               ***/
+/***************************************/
+
+#contact_bar {
+  background-color: var(--dark);
+  position: sticky;
+}
+
+/***************************************/
+/***            HEADER SLUT          ***/
+/***************************************/
+
+/***************************************/
+/***              MAIN               ***/
+/***************************************/
+
+/***************************************/
+/***           MAIN SLUT             ***/
+/***************************************/
+
+/***************************************/
+/***            FOOTER               ***/
+/***************************************/
+
+/***************************************/
+/***            FOOTER SLUT          ***/
+/***************************************/
