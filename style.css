@@ -26,6 +26,13 @@ h2 {
 }
 
 p {
+  color: var(--black);
+  font-family: semplicitapro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+#splash p {
   color: var(--white);
   font-family: semplicitapro, sans-serif;
   font-weight: 300;
@@ -37,6 +44,29 @@ a {
   font-family: semplicitapro, sans-serif;
   font-weight: 300;
   font-style: normal;
+}
+
+#burgermenu {
+  color: var(--white);
+}
+
+button {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+#separation_bar {
+  height: 2vh;
+  width: 100vw;
+  background-color: var(--dark);
+}
+
+section {
+  width: 100vw;
+}
+
+img {
+  max-width: 50%;
 }
 
 /***************************************/
@@ -56,6 +86,22 @@ a {
 /***              MAIN               ***/
 /***************************************/
 
+#splash {
+  background-image: url("images/frontpage.jpg");
+  width: 100vw;
+  height: 100%;
+}
+
+#column {
+  background-color: var(--dark);
+  width: 100vw;
+}
+
+#contact h2,
+#contact a {
+  color: var(--black);
+}
+
 /***************************************/
 /***           MAIN SLUT             ***/
 /***************************************/
@@ -67,6 +113,7 @@ a {
 footer {
   background-color: var(--dark);
   position: absolute;
+  width: 100vw;
 }
 
 /***************************************/
