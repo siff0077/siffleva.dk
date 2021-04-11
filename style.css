@@ -25,6 +25,13 @@ h2 {
   font-style: normal;
 }
 
+h3 {
+  color: var(--white);
+  font-family: grad, serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 p {
   color: var(--black);
   font-family: semplicitapro, sans-serif;
@@ -84,7 +91,21 @@ img {
 /***************************************/
 
 /***************************************/
-/***              MAIN               ***/
+/***            FOOTER               ***/
+/***************************************/
+
+footer {
+  background-color: var(--dark);
+  position: absolute;
+  width: 100vw;
+}
+
+/***************************************/
+/***            FOOTER SLUT          ***/
+/***************************************/
+
+/***************************************/
+/***              FRONTPAGE          ***/
 /***************************************/
 
 #splash {
@@ -107,19 +128,17 @@ img {
 }
 
 /***************************************/
-/***           MAIN SLUT             ***/
+/***           FRONTPAGE SLUT        ***/
 /***************************************/
 
 /***************************************/
-/***            FOOTER               ***/
+/***       PORTFOLIO MENU            ***/
 /***************************************/
 
-footer {
-  background-color: var(--dark);
-  position: absolute;
-  width: 100vw;
+#portfolio_menu {
+  background-color: var(--light);
 }
 
 /***************************************/
-/***            FOOTER SLUT          ***/
+/***       PORTFOLIO MENU SLUT       ***/
 /***************************************/
