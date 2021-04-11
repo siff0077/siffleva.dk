@@ -95,6 +95,82 @@ img {
   position: sticky;
 }
 
+.menu_toggle .bar {
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background: var(--white);
+}
+
+/*_____________*/
+
+.nav_menu {
+  display: grid;
+  grid-template-columns: auto;
+  background: var(--matteblue);
+  margin: 0;
+  /* position: absolute; */
+  top: 80px;
+  left: -100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.nav_menu.active {
+  background: var(--light);
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.nav_links {
+  text-align: center;
+  line-height: 60px;
+  width: 100%;
+  display: table;
+}
+
+.nav_links:hover {
+  background-color: var(--matteblue);
+  color: var(--white);
+  transition: all 0.4s ease-out;
+}
+
+.navbar {
+  width: 100%;
+}
+
+#burger_menu {
+  /* position: absolute; */
+  top: 20%;
+  right: 10%;
+  transform: translate(5%, 20%);
+  /* z-index: 1; */
+  color: var(--white);
+}
+
+.menu_toggle .bar {
+  display: block;
+  cursor: pointer;
+}
+
+.menu_toggle:hover {
+  cursor: pointer;
+}
+
+#burger_menu.is-active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+#burger_menu.is-active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#burger_menu.is-active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /***************************************/
 /***            HEADER SLUT          ***/
 /***************************************/
@@ -117,13 +193,16 @@ footer {
 /***              FRONTPAGE          ***/
 /***************************************/
 
+#frontpage {
+  z-index: -5;
+}
+
 #frontpage #splash {
   background-image: url("images/frontpage.jpg");
   /* position: absolute; */
   width: 100%;
   height: 100%;
   background-size: cover;
-  pointer-events: none;
 }
 
 #frontpage #column {
