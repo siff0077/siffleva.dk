@@ -223,6 +223,10 @@ footer {
 /***       PORTFOLIO MENU            ***/
 /***************************************/
 
+#portfolio_menu .nav_menu.active {
+  background: var(--dark);
+}
+
 #portfolio_menu {
   background-color: var(--light);
 }
@@ -241,7 +245,6 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  pointer-events: none;
 }
 
 #websites #splash_text {
@@ -262,7 +265,6 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  pointer-events: none;
 }
 
 #graphic_work #splash_text {
@@ -284,7 +286,6 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  pointer-events: none;
 }
 
 #photography #splash_text {
@@ -306,7 +307,6 @@ footer {
   width: 100%;
   height: 100%;
   background-size: cover;
-  pointer-events: none;
 }
 
 #other #splash_text {
