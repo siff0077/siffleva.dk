@@ -73,6 +73,15 @@ section {
   height: auto;
 }
 
+#project {
+  background-color: var(--white);
+}
+
+#project h2,
+#project p {
+  color: var(--black);
+}
+
 img {
   max-width: 50%;
 }
@@ -156,14 +165,76 @@ footer {
   pointer-events: none;
 }
 
-#website #website_project {
-  background-color: var(--white);
-}
-
 #websites #splash_text {
   background-color: var(--dark);
   opacity: 75%;
 }
 /***************************************/
 /***        WEBSITES PAGE SLUT       ***/
+/***************************************/
+
+/***************************************/
+/***         GRAPHIC WORK PAGE       ***/
+/***************************************/
+
+#graphic_work #splash {
+  background-image: url("images/splash_graphic.jpg");
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#graphic_work #splash_text {
+  background-color: var(--dark);
+  opacity: 75%;
+}
+
+/***************************************/
+/***        GRAPHIC WORK SLUT        ***/
+/***************************************/
+
+/***************************************/
+/***            PHOTOGRAPHY PAGE       */
+/***************************************/
+
+#photography #splash {
+  background-image: url("images/splash_photo.jpg");
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#photography #splash_text {
+  background-color: var(--dark);
+  opacity: 75%;
+}
+
+/***************************************/
+/***        PHOTOGRAPHY SLUT         ***/
+/***************************************/
+
+/***************************************/
+/***            OTHER PAGE           ***/
+/***************************************/
+
+#other #splash {
+  background-image: url("images/splash_other.jpg");
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  pointer-events: none;
+}
+
+#other #splash_text {
+  background-color: var(--dark);
+  opacity: 75%;
+}
+
+/***************************************/
+/***        OTHER PAGE SLUT          ***/
 /***************************************/
