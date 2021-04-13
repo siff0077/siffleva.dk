@@ -120,21 +120,42 @@ img {
 /*_____________*/
 
 .nav_menu {
-  display: grid;
-  grid-template-columns: auto;
-  background: var(--matteblue);
+  display: flex;
+  flex-direction: column;
   margin: 0;
-  /* position: absolute; */
+  position: absolute;
   top: 80px;
   left: -100%;
-  display: none;
+  opacity: 0;
   transition: all 0.5s ease;
+}
+
+.nav_menu #burgermenu_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.nav_menu #burgermenu_options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_menu #some_burgermenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav_menu #some_burgermenu img {
+  width: 14vw;
 }
 
 .nav_menu.active {
   background: var(--light);
   left: 0;
   transition: all 0.5s ease;
+  opacity: 100;
 }
 
 .nav_links {
@@ -175,7 +196,7 @@ img {
 }
 
 #burger_menu.is-active .bar:nth-child(2) {
-  display: none;
+  opacity: 0;
 }
 
 #burger_menu.is-active .bar:nth-child(1) {
