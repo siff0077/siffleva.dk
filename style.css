@@ -71,8 +71,8 @@ body {
 }
 
 section {
-  width: 100vw;
-  height: auto;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
 #project {
@@ -109,6 +109,10 @@ img {
   font-size: 2.5vw;
 }
 
+#splash_logo {
+  width: 30vw;
+}
+
 /***burgermenu***/
 .menu_toggle .bar {
   width: 25px;
@@ -116,19 +120,18 @@ img {
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
   background: var(--white);
+  display: block;
+  cursor: pointer;
 }
-
-/*_____________*/
 
 .nav_menu {
   display: flex;
   flex-direction: column;
   margin: 0;
   position: absolute;
-  top: 4.65vh;
-  right: -100%;
+  top: 0;
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav_menu #burgermenu_logo {
@@ -155,22 +158,9 @@ img {
 .nav_menu.active {
   background: var(--light);
   right: 0;
-  transition: all 0.5s ease;
+  /*   transition: all 0.5s ease; */
   opacity: 100;
   width: 50vw;
-}
-
-.nav_links {
-  text-align: center;
-  line-height: 60px;
-  width: 100%;
-  display: table;
-}
-
-.nav_links:hover {
-  background-color: var(--matteblue);
-  color: var(--white);
-  transition: all 0.4s ease-out;
 }
 
 #navbar {
@@ -181,16 +171,11 @@ img {
 
 #burger_menu {
   position: absolute;
-  top: 7%;
-  right: 7%;
+  top: 6vw;
+  right: 6vw;
   transform: translate(5%, 20%);
   z-index: 1;
   color: var(--white);
-}
-
-.menu_toggle .bar {
-  display: block;
-  cursor: pointer;
 }
 
 .menu_toggle:hover {
@@ -238,10 +223,10 @@ footer {
 
 #frontpage #splash {
   background-image: url("images/frontpage.jpg");
-  position: cover;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80vh;
   background-size: cover;
+  background-position: 65%;
 }
 
 #frontpage #splash_text p {
@@ -258,7 +243,6 @@ footer {
 
 #frontpage #column {
   background-color: var(--dark);
-  width: 100vw;
 }
 
 #frontpage #contact h2,
