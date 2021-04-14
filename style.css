@@ -229,12 +229,26 @@ footer {
   background-position: 65%;
 }
 
+#frontpage #splash_text {
+  place-self: flex-end;
+}
+
 #frontpage #splash_text p {
   color: var(--white);
   font-family: semplicitapro, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: 5vw;
+}
+
+#frontpage #bottom_column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#frontpage #bottom_column p {
+  place-self: center;
 }
 
 #frontpage #column h1 {
@@ -248,6 +262,13 @@ footer {
 #frontpage #contact h2,
 #contact a {
   color: var(--black);
+}
+
+#about,
+#resume,
+#contact {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 /***************************************/
@@ -276,10 +297,10 @@ footer {
 
 #websites #splash {
   background-image: url("images/splash_web.jpg");
-  /* position: absolute; */
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80vh;
   background-size: cover;
+  background-position: 65%;
 }
 
 #websites #splash_text {
@@ -296,10 +317,10 @@ footer {
 
 #graphic_work #splash {
   background-image: url("images/splash_graphic.jpg");
-  /* position: absolute; */
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80vh;
   background-size: cover;
+  background-position: 65%;
 }
 
 #graphic_work #splash_text {
@@ -317,10 +338,10 @@ footer {
 
 #photography #splash {
   background-image: url("images/splash_photo.jpg");
-  /* position: absolute; */
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80vh;
   background-size: cover;
+  background-position: 65%;
 }
 
 #photography #splash_text {
@@ -338,10 +359,10 @@ footer {
 
 #other #splash {
   background-image: url("images/splash_other.jpg");
-  /* position: absolute; */
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80vh;
   background-size: cover;
+  background-position: 65%;
 }
 
 #other #splash_text {
