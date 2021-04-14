@@ -61,6 +61,7 @@ button {
 body {
   background-color: var(--white);
   background-size: cover;
+  margin: 0;
 }
 
 #separation_bar {
@@ -124,8 +125,8 @@ img {
   flex-direction: column;
   margin: 0;
   position: absolute;
-  top: 80px;
-  left: -100%;
+  top: 4.65vh;
+  right: -100%;
   opacity: 0;
   transition: all 0.5s ease;
 }
@@ -153,9 +154,10 @@ img {
 
 .nav_menu.active {
   background: var(--light);
-  left: 0;
+  right: 0;
   transition: all 0.5s ease;
   opacity: 100;
+  width: 50vw;
 }
 
 .nav_links {
@@ -231,11 +233,12 @@ footer {
 
 #frontpage {
   z-index: -5;
+  position: cover;
 }
 
 #frontpage #splash {
   background-image: url("images/frontpage.jpg");
-  /* position: absolute; */
+  position: cover;
   width: 100%;
   height: 100%;
   background-size: cover;
