@@ -8,6 +8,7 @@
   --p: 3.5vw;
   --a: 2.5vw;
   --button: 3vw;
+  --footer_a: 3.5vw;
 }
 
 /***************************************/
@@ -101,13 +102,18 @@ img {
 
 #contact_bar img {
   position: relative;
-  width: 5vw;
+  width: 7vw;
   height: auto;
+  margin: 1vw;
 }
 
-#contact_bar #contact_info {
-  font-size: 2.5vw;
+/* #contact_bar #some_contact_bar {
+  margin-left: 2vw;
 }
+
+#contact_bar #info_contact_bar {
+  margin-right: 2vw;
+} */
 
 #splash_logo {
   width: 30vw;
@@ -132,6 +138,7 @@ img {
   top: 0;
   opacity: 0;
   transition: all 0.5s ease-in-out;
+  /* padding-top: 15vh; */
 }
 
 .nav_menu #burgermenu_logo {
@@ -148,7 +155,6 @@ img {
 .nav_menu #some_burgermenu {
   display: flex;
   flex-direction: row;
-  justify-content: center;
 }
 
 .nav_menu #some_burgermenu img {
@@ -171,7 +177,7 @@ img {
 
 #burger_menu {
   position: absolute;
-  top: 6vw;
+  top: 10vw;
   right: 6vw;
   transform: translate(5%, 20%);
   z-index: 1;
@@ -208,6 +214,9 @@ footer {
   width: 100vw;
 }
 
+footer a {
+  font-size: var(--footer_a);
+}
 /***************************************/
 /***            FOOTER SLUT          ***/
 /***************************************/
@@ -259,9 +268,40 @@ footer {
   background-color: var(--dark);
 }
 
+#frontpage #contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#frontpage #contact #info_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #frontpage #contact h2,
 #contact a {
   color: var(--black);
+}
+
+#frontpage #contact a {
+  font-size: var(--footer_a);
+}
+
+#frontpage #contact_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#frontpage #contact_some {
+  display: flex;
+  justify-content: center;
+}
+
+#frontpage #contact_some img {
+  width: 30vw;
 }
 
 #about,
