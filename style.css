@@ -53,6 +53,7 @@ button {
   font-weight: 700;
   font-style: normal;
   font-size: var(--button);
+  height: 5vh;
 }
 
 /***************************************/
@@ -211,11 +212,30 @@ img {
 footer {
   background-color: var(--dark);
   /* position: absolute; */
-  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer a {
+footer a,
+footer h1 {
   font-size: var(--footer_a);
+  color: var(--white);
+}
+
+footer #contact_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer #footer_logo {
+  width: 40vw;
+  place-self: center;
+}
+
+footer #some_footer img {
+  width: 10vw;
 }
 /***************************************/
 /***            FOOTER SLUT          ***/
@@ -266,17 +286,24 @@ footer a {
 
 #frontpage #column {
   background-color: var(--dark);
+  padding: 3vw;
+  margin-top: 5vh;
+}
+
+#frontpage #resume #top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#frontpage #resume p {
+  color: var(--white);
 }
 
 #frontpage #contact {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#frontpage #contact #info_box {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -289,19 +316,35 @@ footer a {
   font-size: var(--footer_a);
 }
 
-#frontpage #contact_info {
+#contact #contact_info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+#contact #phone,
+#contact #mail {
+  display: flex;
+  flex-direction: row;
+}
+
+#contact #phone img,
+#contact #mail img {
+  width: 5vw;
+  margin-right: 1vw;
 }
 
 #frontpage #contact_some {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
 }
 
 #frontpage #contact_some img {
   width: 30vw;
+}
+
+#contact #contact_image {
+  margin-left: 5vw;
+  width: 40vw;
 }
 
 #about,
