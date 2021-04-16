@@ -56,6 +56,16 @@ button {
   height: 5vh;
 }
 
+#arrow {
+  width: 6vw;
+  margin-left: 2vw;
+}
+
+#download {
+  width: 3vw;
+  margin-left: 2vw;
+}
+
 /***************************************/
 /***          FONT SIZES SLUT          */
 /***************************************/
@@ -270,14 +280,10 @@ footer #some_footer img {
   font-size: 5vw;
 }
 
-#frontpage #bottom_column {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#frontpage #bottom_column p {
-  place-self: center;
+#frontpage #about_image {
+  width: 45vw;
+  float: right;
+  margin: 1vw;
 }
 
 #frontpage #column h1 {
