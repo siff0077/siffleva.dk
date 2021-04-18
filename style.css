@@ -7,12 +7,12 @@
   --h2: 4vw;
   --p: 3.5vw;
   --a: 2.5vw;
-  --button: 3vw;
+  --button: 3.5vw;
   --footer_a: 3.5vw;
 }
 
 /***************************************/
-/***           FONT SIZES            ***/
+/***           FONT STYLE            ***/
 /***************************************/
 
 h1 {
@@ -44,6 +44,7 @@ a {
   font-weight: 300;
   font-style: normal;
   font-size: var(--a);
+  text-decoration: none;
 }
 
 button {
@@ -54,20 +55,16 @@ button {
   font-style: normal;
   font-size: var(--button);
   height: 5vh;
-}
-
-#arrow {
-  width: 6vw;
-  margin-left: 2vw;
-}
-
-#download {
-  width: 3vw;
-  margin-left: 2vw;
+  place-items: center;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
 }
 
 /***************************************/
-/***          FONT SIZES SLUT          */
+/***          FONT STYLE SLUT*         */
 /***************************************/
 
 body {
@@ -100,6 +97,31 @@ img {
   max-width: 50%;
 }
 
+#splash {
+  width: auto;
+  height: 80vh;
+  background-size: cover;
+  background-position: 65%;
+}
+
+#arrow {
+  width: 6vw;
+  margin-left: 2vw;
+}
+
+#download {
+  width: 3vw;
+  margin-left: 2vw;
+}
+
+button:hover {
+  background: var(--light);
+}
+
+a:hover {
+  color: var(--light);
+}
+
 /***************************************/
 /***            HEADER               ***/
 /***************************************/
@@ -128,6 +150,8 @@ img {
 
 #splash_logo {
   width: 30vw;
+  top: 8vh;
+  position: absolute;
 }
 
 /***burgermenu***/
@@ -188,7 +212,7 @@ img {
 
 #burger_menu {
   position: absolute;
-  top: 10vw;
+  top: 7vh;
   right: 6vw;
   transform: translate(5%, 20%);
   z-index: 1;
@@ -222,9 +246,8 @@ img {
 footer {
   background-color: var(--dark);
   /* position: absolute; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 footer a,
@@ -239,9 +262,31 @@ footer #contact_footer {
   align-items: center;
 }
 
+#footer_logo_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 4vh;
+  margin-bottom: 2vh;
+}
+
 footer #footer_logo {
   width: 40vw;
   place-self: center;
+}
+
+footer #some_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer #some_footer #footer_icons {
+  display: flex;
+  flex-direction: row;
+}
+
+footer #some_footer #footer_icons a {
+  text-align: center;
 }
 
 footer #some_footer img {
@@ -262,14 +307,14 @@ footer #some_footer img {
 
 #frontpage #splash {
   background-image: url("images/frontpage.jpg");
-  width: auto;
-  height: 80vh;
-  background-size: cover;
-  background-position: 65%;
+  display: flex;
+  flex-direction: column;
 }
 
 #frontpage #splash_text {
-  place-self: flex-end;
+  position: relative;
+  top: 50vh;
+  left: 0vw;
 }
 
 #frontpage #splash_text p {
@@ -342,6 +387,10 @@ footer #some_footer img {
 #frontpage #contact_some {
   display: flex;
   flex-direction: row;
+}
+
+#frontpage #contact_some a {
+  text-align: left;
 }
 
 #frontpage #contact_some img {
@@ -462,3 +511,5 @@ footer #some_footer img {
 /***************************************/
 /***        OTHER PAGE SLUT          ***/
 /***************************************/
+
+/****************************************************************MEDIA Q*********************************************************/
