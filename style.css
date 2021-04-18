@@ -23,11 +23,12 @@ h1 {
   font-size: var(--h1);
 }
 
-h3 {
+h2 {
   color: var(--white);
   font-family: grad, serif;
   font-weight: 700;
   font-style: normal;
+  font-size: var(--h2);
 }
 
 p {
@@ -156,9 +157,9 @@ a:hover {
 
 /***burgermenu***/
 .menu_toggle .bar {
-  width: 25px;
+  width: 7vw;
   height: 3px;
-  margin: 5px auto;
+  margin: 0.8vh auto;
   transition: all 0.3s ease-in-out;
   background: var(--white);
   display: block;
@@ -417,12 +418,38 @@ footer #some_footer img {
 /***       PORTFOLIO MENU            ***/
 /***************************************/
 
+#portfolio {
+  background-color: var(--light);
+}
+
+#portfolio #splash {
+  height: 12vh;
+}
+
 #portfolio_menu .nav_menu.active {
   background: var(--dark);
 }
 
-#portfolio_menu {
-  background-color: var(--light);
+#portfolio h1 {
+  color: var(--white);
+}
+
+#portfolio #options {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 10vw;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
+}
+
+#portfolio #option_box {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  min-height: 30vh;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 2vw -1vh #1f21099c;
 }
 
 /***************************************/
@@ -513,3 +540,12 @@ footer #some_footer img {
 /***************************************/
 
 /****************************************************************MEDIA Q*********************************************************/
+
+/*Tablet*/
+@media screen and (min-width: 768px) {
+  #resume_columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-gap: 5vw;
+  }
+}
