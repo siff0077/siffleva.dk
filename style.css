@@ -308,6 +308,8 @@ footer #some_footer #footer_icons a {
 
 footer #some_footer img {
   width: 10vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 /***************************************/
 /***            FOOTER SLUT          ***/
@@ -411,7 +413,9 @@ footer #some_footer img {
 }
 
 #frontpage #contact_some img {
-  width: 30vw;
+  width: 8vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
 }
 
 #contact #contact_image {
@@ -494,6 +498,10 @@ footer #some_footer img {
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
+}
+
+#websites #project img {
+  width: 100%;
 }
 
 /***************************************/
@@ -581,6 +589,10 @@ footer #some_footer img {
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
+}
+
+#other #project img {
+  width: 100%;
 }
 
 /***************************************/
