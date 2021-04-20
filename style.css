@@ -87,6 +87,8 @@ section {
 
 #project {
   background-color: var(--white);
+  margin-top: 5vh;
+  margin-bottom: 5vh;
 }
 
 #project h1,
@@ -94,8 +96,18 @@ section {
   color: var(--black);
 }
 
+#project_image {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  box-shadow: 2vw -1vh #1f2109;
+}
+
+#project_image img {
+  max-width: 100%;
+}
+
 img {
-  max-width: 50%;
+  width: 50%;
 }
 
 #splash {
@@ -103,6 +115,10 @@ img {
   height: 80vh;
   background-size: cover;
   background-position: 65%;
+}
+
+#splash_text .text {
+  color: var(--white);
 }
 
 #arrow {
@@ -460,18 +476,26 @@ footer #some_footer img {
 /***         WEBSITES PAGE           ***/
 /***************************************/
 
+#websites {
+  z-index: -5;
+  position: cover;
+}
+
 #websites #splash {
   background-image: url("images/splash_web.jpg");
-  width: auto;
-  height: 80vh;
-  background-size: cover;
-  background-position: 65%;
+  background-position: 50%;
 }
 
 #websites #splash_text {
   background-color: var(--dark);
   opacity: 75%;
+  position: relative;
+  top: 20vh;
+  left: 0vw;
+  max-width: 50%;
+  padding: 2vh;
 }
+
 /***************************************/
 /***        WEBSITES PAGE SLUT       ***/
 /***************************************/
@@ -480,17 +504,26 @@ footer #some_footer img {
 /***         GRAPHIC WORK PAGE       ***/
 /***************************************/
 
+#graphic_work {
+  z-index: -5;
+}
+
 #graphic_work #splash {
   background-image: url("images/splash_graphic.jpg");
   width: auto;
   height: 80vh;
   background-size: cover;
-  background-position: 65%;
+  background-position: 85%;
 }
 
 #graphic_work #splash_text {
   background-color: var(--dark);
   opacity: 75%;
+  position: relative;
+  top: 20vh;
+  left: 0vw;
+  max-width: 50%;
+  padding: 2vh;
 }
 
 /***************************************/
@@ -501,17 +534,26 @@ footer #some_footer img {
 /***            PHOTOGRAPHY PAGE       */
 /***************************************/
 
+#photography {
+  z-index: -5;
+}
+
 #photography #splash {
   background-image: url("images/splash_photo.jpg");
   width: auto;
   height: 80vh;
   background-size: cover;
-  background-position: 65%;
+  background-position: 40%;
 }
 
 #photography #splash_text {
   background-color: var(--dark);
   opacity: 75%;
+  position: relative;
+  top: 20vh;
+  left: 0vw;
+  max-width: 50%;
+  padding: 2vh;
 }
 
 /***************************************/
@@ -522,17 +564,23 @@ footer #some_footer img {
 /***            OTHER PAGE           ***/
 /***************************************/
 
+#other {
+  z-index: -5;
+}
+
 #other #splash {
   background-image: url("images/splash_other.jpg");
-  width: auto;
-  height: 80vh;
-  background-size: cover;
-  background-position: 65%;
+  background-position: 70%;
 }
 
 #other #splash_text {
   background-color: var(--dark);
   opacity: 75%;
+  position: relative;
+  top: 20vh;
+  left: 0vw;
+  max-width: 50%;
+  padding: 2vh;
 }
 
 /***************************************/
@@ -541,11 +589,46 @@ footer #some_footer img {
 
 /****************************************************************MEDIA Q*********************************************************/
 
+#photography #project .row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+#photography #project .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+#photography #project .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  #photography #project .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  #photography #project .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 /*Tablet*/
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   #resume_columns {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     grid-gap: 5vw;
   }
-}
+} */
