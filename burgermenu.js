@@ -1,12 +1,9 @@
-window.addEventListener("DOMContentLoaded", initPage);
 
-        function initPage() {
 
-        const menu = document.querySelector('#burger_menu');
-        const menuLinks = document.querySelector('.nav_menu');
+const menu = document.querySelector("svg");
+menu.addEventListener("click", morph);
 
-        menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active');
-        menuLinks.classList.toggle('active');
-        })
-        }
+function morph() {
+  menu.classList.toggle("open");
+  document.querySelector("#burgermenu_links").classList.toggle("inactive");
+}
