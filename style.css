@@ -3,6 +3,7 @@
   --light: #595b46;
   --white: #ffffff;
   --black: #000000;
+  --darkopacity: #1f2109a9;
   --h1: 5vw;
   --h2: 4vw;
   --p: 3.5vw;
@@ -62,6 +63,7 @@ button {
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 /***************************************/
@@ -114,7 +116,6 @@ img {
   width: auto;
   height: 80vh;
   background-size: cover;
-  background-position: 65%;
 }
 
 #splash_text .text {
@@ -143,54 +144,38 @@ a:hover {
 /***            HEADER               ***/
 /***************************************/
 
-#contact_bar {
-  background-color: var(--dark);
-  position: sticky;
+#navigation {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  position: fixed;
 }
 
-#contact_bar img {
-  position: relative;
-  width: 7vw;
-  height: auto;
-  margin: 1vw;
-  margin-top: 1vh;
-}
-
-#contact_bar #some_contact_bar {
-  margin-left: 1vw;
-  text-align: center;
-}
-
-#contact_bar #info_contact_bar {
-  margin-right: 1vw;
-  text-align: center;
+#navigation a:hover {
+  color: var(--black);
 }
 
 #splash_logo {
   width: 30vw;
-  top: 8vh;
-  position: absolute;
+  position: fixed;
+  margin-top: 2vh;
 }
 
-/***New burgermenu***/
+/***burgermenu***/
 
 svg {
   position: fixed;
-  top: 5%;
-  left: 80%;
-  transform: translate(0, 10%);
   cursor: pointer;
-  z-index: 2;
+  z-index: 1;
+  max-width: 20vw;
+  right: 1vw;
+  margin-top: 1vh;
 }
 
 svg path {
   stroke-width: 40;
-  stroke-linecap: round;
   stroke: #fff;
   fill: none;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s ease-in-out;
 }
 
 /* burger form */
@@ -220,11 +205,12 @@ svg path {
   background-color: var(--light);
   max-width: 40%;
   height: auto;
-  z-index: 1;
+  z-index: 0;
   position: fixed;
   right: 0;
   padding: 5vw;
   padding-top: 3vh;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .inactive {
@@ -260,6 +246,38 @@ svg path {
 
 #burgermenu_links a {
   font-size: var(--h1);
+}
+
+.dropdown_portfolio {
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+  margin-top: 1vh;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: var(--dark);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.dropdown_content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#navigation .dropdown_content a:hover {
+  color: var(--white);
+  background-color: var(--light);
+  transition: all 0.2s ease-out;
+}
+
+.dropdown_portfolio:hover .dropdown_content {
+  display: block;
+  transition: all 0.2s ease-out;
 }
 
 /***************************************/
@@ -330,7 +348,6 @@ footer #some_footer img {
 /***************************************/
 
 #frontpage {
-  z-index: -5;
   position: cover;
 }
 
@@ -490,19 +507,13 @@ footer #some_footer img {
 /***         WEBSITES PAGE           ***/
 /***************************************/
 
-#websites {
-  z-index: -5;
-  position: cover;
-}
-
 #websites #splash {
   background-image: url("images/splash_web.jpg");
   background-position: 50%;
 }
 
 #websites #splash_text {
-  background-color: var(--dark);
-  opacity: 75%;
+  background-color: var(--darkopacity);
   position: relative;
   top: 20vh;
   left: 0vw;
@@ -522,10 +533,6 @@ footer #some_footer img {
 /***         GRAPHIC WORK PAGE       ***/
 /***************************************/
 
-#graphic_work {
-  z-index: -5;
-}
-
 #graphic_work #splash {
   background-image: url("images/splash_graphic.jpg");
   width: auto;
@@ -535,8 +542,7 @@ footer #some_footer img {
 }
 
 #graphic_work #splash_text {
-  background-color: var(--dark);
-  opacity: 75%;
+  background-color: var(--darkopacity);
   position: relative;
   top: 20vh;
   left: 0vw;
@@ -552,10 +558,6 @@ footer #some_footer img {
 /***            PHOTOGRAPHY PAGE       */
 /***************************************/
 
-#photography {
-  z-index: -5;
-}
-
 #photography #splash {
   background-image: url("images/splash_photo.jpg");
   width: auto;
@@ -565,8 +567,7 @@ footer #some_footer img {
 }
 
 #photography #splash_text {
-  background-color: var(--dark);
-  opacity: 75%;
+  background-color: var(--darkopacity);
   position: relative;
   top: 20vh;
   left: 0vw;
@@ -601,18 +602,13 @@ footer #some_footer img {
 /***            OTHER PAGE           ***/
 /***************************************/
 
-#other {
-  z-index: -5;
-}
-
 #other #splash {
   background-image: url("images/splash_other.jpg");
   background-position: 70%;
 }
 
 #other #splash_text {
-  background-color: var(--dark);
-  opacity: 75%;
+  background-color: var(--darkopacity);
   position: relative;
   top: 20vh;
   left: 0vw;
