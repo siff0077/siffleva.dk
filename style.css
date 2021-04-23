@@ -4,12 +4,12 @@
   --white: #ffffff;
   --black: #000000;
   --darkopacity: #1f2109a9;
-  --h1: 5vw;
-  --h2: 4vw;
-  --p: 3.5vw;
-  --a: 2.5vw;
-  --button: 3.5vw;
-  --footer_a: 3.5vw;
+  --h1: 1.2rem;
+  --h2: 1rem;
+  --p: 0.8rem;
+  --a: 0.8rem;
+  --button: 1rem;
+  --footer_a: 0.8rem;
 }
 
 /***************************************/
@@ -56,7 +56,8 @@ button {
   font-weight: 700;
   font-style: normal;
   font-size: var(--button);
-  height: 5vh;
+  height: auto;
+  padding: 2vw;
   place-items: center;
   border: none;
   text-align: center;
@@ -101,7 +102,6 @@ section {
 #project_image {
   margin-top: 5vh;
   margin-bottom: 5vh;
-  box-shadow: 2vw -1vh #1f2109;
 }
 
 #project_image img {
@@ -114,7 +114,7 @@ img {
 
 #splash {
   width: auto;
-  height: 80vh;
+  height: 90vh;
   background-size: cover;
 }
 
@@ -269,6 +269,7 @@ svg path {
   text-decoration: none;
   display: block;
 }
+
 #navigation .dropdown_content a:hover {
   color: var(--white);
   background-color: var(--light);
@@ -355,11 +356,13 @@ footer #some_footer img {
   background-image: url("images/frontpage.jpg");
   display: flex;
   flex-direction: column;
+  background-position: 65%;
+  height: 100vh;
 }
 
 #frontpage #splash_text {
   position: relative;
-  top: 50vh;
+  top: 60vh;
   left: 0vw;
 }
 
@@ -368,21 +371,51 @@ footer #some_footer img {
   font-family: semplicitapro, sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 5vw;
+  font-size: var(--h1);
+}
+
+#frontpage #about_elements {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  margin-top: 5vh;
 }
 
 #frontpage #about_image {
-  width: 45vw;
-  float: right;
-  margin: 1vw;
+  width: 40vw;
 }
 
-#frontpage #column h1 {
+#frontpage #about_image img {
+  width: 100%;
+}
+
+#frontpage #about_contact {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+#frontpage #about_contact a {
+  text-align: left;
+}
+
+#frontpage #about_contact img {
+  width: 8vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+#frontpage #about h2 {
+  color: var(--dark);
+}
+
+#frontpage #resume #column h1 {
   color: var(--white);
 }
 
-#frontpage #column {
-  background-color: var(--dark);
+#frontpage #resume #column {
+  background-color: var(--light);
   padding: 3vw;
   margin-top: 5vh;
 }
@@ -398,61 +431,8 @@ footer #some_footer img {
   color: var(--white);
 }
 
-#frontpage #contact {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#frontpage #contact h2,
-#contact a {
-  color: var(--black);
-}
-
-#frontpage #contact a {
-  font-size: var(--footer_a);
-}
-
-#contact #contact_info {
-  display: flex;
-  flex-direction: column;
-}
-
-#contact #phone,
-#contact #mail {
-  display: flex;
-  flex-direction: row;
-}
-
-#contact #phone img,
-#contact #mail img {
-  width: 5vw;
-  margin-right: 1vw;
-}
-
-#frontpage #contact_some {
-  display: flex;
-  flex-direction: row;
-}
-
-#frontpage #contact_some a {
-  text-align: left;
-}
-
-#frontpage #contact_some img {
-  width: 8vw;
-  margin-left: 1vw;
-  margin-right: 1vw;
-}
-
-#contact #contact_image {
-  margin-left: 5vw;
-  width: 40vw;
-}
-
 #about,
-#resume,
-#contact {
+#resume {
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
@@ -515,7 +495,7 @@ footer #some_footer img {
 #websites #splash_text {
   background-color: var(--darkopacity);
   position: relative;
-  top: 20vh;
+  top: 25vh;
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
@@ -536,7 +516,6 @@ footer #some_footer img {
 #graphic_work #splash {
   background-image: url("images/splash_graphic.jpg");
   width: auto;
-  height: 80vh;
   background-size: cover;
   background-position: 85%;
 }
@@ -544,7 +523,7 @@ footer #some_footer img {
 #graphic_work #splash_text {
   background-color: var(--darkopacity);
   position: relative;
-  top: 20vh;
+  top: 25vh;
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
@@ -561,7 +540,6 @@ footer #some_footer img {
 #photography #splash {
   background-image: url("images/splash_photo.jpg");
   width: auto;
-  height: 80vh;
   background-size: cover;
   background-position: 40%;
 }
@@ -569,7 +547,7 @@ footer #some_footer img {
 #photography #splash_text {
   background-color: var(--darkopacity);
   position: relative;
-  top: 20vh;
+  top: 25vh;
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
@@ -582,14 +560,15 @@ footer #some_footer img {
 }
 
 /* Create four equal columns that sits next to each other */
-#photography #project .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+#photography #project .photos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1vw;
+  margin-bottom: 5vh;
+  margin-top: 3vh;
 }
 
-#photography #project .column img {
-  margin-top: 8px;
+#photography #project .photos img {
   vertical-align: middle;
   width: 100%;
 }
@@ -610,7 +589,7 @@ footer #some_footer img {
 #other #splash_text {
   background-color: var(--darkopacity);
   position: relative;
-  top: 20vh;
+  top: 25vh;
   left: 0vw;
   max-width: 50%;
   padding: 2vh;
@@ -626,27 +605,213 @@ footer #some_footer img {
 
 /****************************************************************MEDIA Q*********************************************************/
 
+/*flipped phone*/
+@media screen and (min-width: 600px) {
+  /*****GENEREL*****/
+
+  #arrow {
+    width: 4vw;
+  }
+
+  #download {
+    width: 2.5vw;
+  }
+
+  svg {
+    max-width: 15vw;
+  }
+
+  section:nth-of-type(2) {
+    margin-top: 10vh;
+  }
+
+  section:last-of-type {
+    margin-bottom: 15vh;
+  }
+
+  #splash_logo {
+    width: 20vw;
+  }
+
+  button {
+    padding: 1vw;
+  }
+
+  /******FOOTER******/
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  footer #some_footer img {
+    width: 3.5vw;
+  }
+
+  footer #footer_logo {
+    width: 20vw;
+  }
+
+  /*****FONTS*******/
+
+  /****FRONTPAGE*****/
+
+  #frontpage #splash_text {
+    top: 55vh;
+  }
+
+  #frontpage #about {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #frontpage #about_elements {
+    flex-direction: column-reverse;
+    margin-left: 10vw;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #frontpage #about_image {
+    width: 25vw;
+  }
+
+  #frontpage #about_contact {
+    flex-direction: row;
+    margin-top: 10vh;
+  }
+
+  #frontpage #about_contact img {
+    width: 4vw;
+  }
+
+  #frontpage #resume_columns {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 5vw;
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+  }
+  /*****PORTFOLIO***/
+
+  #portfolio #options {
+    grid-gap: 5vw;
+  }
+
+  #portfolio #option_box {
+    box-shadow: 1vw -2vh #1f21099c;
+  }
+
+  /*****WEBSITES*****/
+
+  #websites #splash_text {
+    max-width: 60%;
+  }
+
+  #websites #content_box_1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #websites #content_box_2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #websites #content_box_1 #project_image {
+    margin-left: 5vw;
+  }
+
+  #websites #content_box_2 #project_image {
+    margin-right: 5vw;
+  }
+
+  /****GRAPHIC WORK*****/
+
+  #graphic_work #splash_text {
+    max-width: 60%;
+  }
+
+  /*****PHOTOGRAPHY****/
+  #photography #splash_text {
+    max-width: 60%;
+  }
+
+  #photography #project .photos {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  /****OTHER****/
+
+  #other #splash_text {
+    max-width: 60%;
+  }
+
+  #other #content_box_1 {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #other #content_box_2 {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  #other #content_box_1 #project_image {
+    margin-left: 5vw;
+  }
+
+  #other #content_box_2 #project_image {
+    margin-right: 5vw;
+  }
+}
+
+/******HEADER******/
+
+/******FOOTER******/
+
+/*****FONTS*******/
+
+/*****GENEREL*****/
+
+/****FRONTPAGE*****/
+
+/*****PORTFOLIO***/
+
+/*****WEBSITES*****/
+
+/****GRAPHIC WORK*****/
+
+/*****PHOTOGRAPHY****/
+
+/****OTHER****/
+
+/* Create four equal columns that sits next to each other */
+/* #photography #project .column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+#photography #project .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+} */
+
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   #photography #project .column {
     flex: 50%;
     max-width: 50%;
   }
-}
+} */
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   #photography #project .column {
     flex: 100%;
     max-width: 100%;
-  }
-}
-
-/*Tablet*/
-/* @media screen and (min-width: 768px) {
-  #resume_columns {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-    grid-gap: 5vw;
   }
 } */
