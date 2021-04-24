@@ -776,29 +776,6 @@ footer #some_footer img {
   /******FOOTER******/
 
   /*****FONTS*******/
-  h1,
-  #burgermenu_links a,
-  #frontpage #splash_text p {
-    font-size: var(--h1_700px);
-  }
-
-  h2 {
-    font-size: var(--h2_700px);
-  }
-
-  button {
-    font-size: var(--button_700px);
-  }
-
-  p {
-    font-size: var(--p_700px);
-  }
-
-  a,
-  footer a,
-  footer h1 {
-    font-size: var(--footer_a_700px);
-  }
 
   /****FRONTPAGE*****/
 
@@ -857,6 +834,34 @@ footer #some_footer img {
   /****OTHER****/
   #other #splash_text {
     max-width: 50%;
+  }
+}
+
+/*Mediaq to help with the font problem between horizontal phone and vertical ipad, because the pixel-size overlap*/
+@media screen and (min-width: 820px) {
+  /*****FONTS******/
+  h1,
+  #burgermenu_links a,
+  #frontpage #splash_text p {
+    font-size: var(--h1_700px);
+  }
+
+  h2 {
+    font-size: var(--h2_700px);
+  }
+
+  button {
+    font-size: var(--button_700px);
+  }
+
+  p {
+    font-size: var(--p_700px);
+  }
+
+  a,
+  footer a,
+  footer h1 {
+    font-size: var(--footer_a_700px);
   }
 }
 
