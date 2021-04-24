@@ -15,7 +15,17 @@
   --h2_700px: 1.4em;
   --button_700px: 1.4em;
   --p_700px: 1.2em;
+  --a_700px: 1.2em;
   --footer_a_700px: 1em;
+  /*****************/
+  --h1_1200px: 1.5em;
+  --h2_1200px: 1.1em;
+  --button_1200px: 1em;
+  --p_1200px: 0.8em;
+  --a_1200px: 0.8em;
+  --footer_a_1200px: 0.8em;
+  --splash_text_1200px: 2.5em;
+  --splash_button_1200px: 1.6em;
 }
 
 /***************************************/
@@ -378,6 +388,7 @@ footer #some_footer img {
   font-weight: 500;
   font-style: normal;
   font-size: var(--h1);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 #frontpage #about_elements {
@@ -627,14 +638,6 @@ footer #some_footer img {
     max-width: 15vw;
   }
 
-  section:nth-of-type(2) {
-    margin-top: 10vh;
-  }
-
-  section:last-of-type {
-    margin-bottom: 15vh;
-  }
-
   #splash_logo {
     width: 20vw;
   }
@@ -707,6 +710,14 @@ footer #some_footer img {
 
   #portfolio #option_box {
     box-shadow: 1vw -2vh #1f21099c;
+  }
+
+  #portfolio section:nth-of-type(2) {
+    margin-top: 10vh;
+  }
+
+  #portfolio section:last-of-type {
+    margin-bottom: 15vh;
   }
 
   /*****WEBSITES*****/
@@ -806,11 +817,11 @@ footer #some_footer img {
     margin-bottom: 5vh;
   }
 
-  section:nth-of-type(2) {
+  #portfolio section:nth-of-type(2) {
     margin-top: 5vh;
   }
 
-  section:last-of-type {
+  #portfolio section:last-of-type {
     margin-bottom: 10vh;
   }
 
@@ -873,8 +884,16 @@ footer #some_footer img {
     grid-gap: 5vw;
   }
 
-  section:nth-of-type(2) {
+  #portfolio section:nth-of-type(2) {
     margin-top: 10vh;
+  }
+
+  /*****FOOTER*****/
+
+  footer {
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
   }
 }
 
@@ -882,21 +901,164 @@ footer #some_footer img {
 @media screen and (min-width: 1200px) {
   /*****GENEREL*****/
 
-  /******FOOTER******/
+  #splash_logo {
+    width: 15vw;
+    margin-top: 3.5vh;
+  }
 
-  /*****FONTS*******/
+  #splash {
+    height: 70vh;
+  }
+
+  svg {
+    max-width: 10vw;
+  }
+
+  #burgermenu_links #some_burgermenu a {
+    width: 10%;
+  }
+
+  #burgermenu_links {
+    max-width: 20%;
+  }
+
+  #arrow {
+    width: 2vw;
+  }
+
+  #download {
+    width: 1vw;
+  }
+
+  button {
+    min-width: 10vw;
+  }
+
+  section {
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+
+  #seperation_bar {
+    width: auto;
+  }
+
+  #project {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+
+  #project:last-of-type {
+    margin-bottom: 10vh;
+  }
+
+  /******FOOTER******/
+  footer #some_footer img {
+    width: 2.5vw;
+  }
+  footer #some_footer img {
+    width: 2.5vw;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+  }
+
+  /*****FONTS******/
+  h1,
+  #burgermenu_links a {
+    font-size: var(--h1_1200px);
+  }
+
+  h2 {
+    font-size: var(--h2_1200px);
+  }
+
+  button {
+    font-size: var(--button_1200px);
+  }
+
+  p {
+    font-size: var(--p_1200px);
+  }
+
+  a,
+  footer a,
+  footer h1 {
+    font-size: var(--footer_a_1200px);
+  }
+
+  #frontpage #splash_text p {
+    font-size: var(--splash_text_1200px);
+  }
+
+  #frontpage #splash button {
+    font-size: var(--splash_button_1200px);
+  }
 
   /****FRONTPAGE*****/
 
+  #frontpage #splash {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    height: 100vh;
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+
+  #frontpage #splash_text {
+    top: 40vh;
+  }
+
+  #frontpage #about_elements {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #frontpage #about_contact img {
+    width: 3vw;
+  }
+
+  #frontpage #about_image {
+    width: 17vw;
+    margin-left: 5vw;
+  }
+
+  #frontpage #resume_columns {
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-gap: 2vw;
+  }
+
+  #frontpage #resume #column {
+    padding: 2vw;
+  }
+
+  #frontpage #about,
+  #frontpage #resume {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+
+  #frontpage #resume {
+    margin-bottom: 15vh;
+  }
+
   /*****PORTFOLIO***/
 
-  /*****WEBSITES*****/
-
-  /****GRAPHIC WORK*****/
+  #portfolio section:nth-of-type(2) {
+    margin-top: 10vh;
+  }
+  #portfolio section:last-of-type {
+    margin-bottom: 15vh;
+  }
 
   /*****PHOTOGRAPHY****/
 
-  /****OTHER****/
+  #photography #project .photos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+/*laptop 1440 x 900*/
+@media screen and (min-width: 1420px) {
 }
 
 /*****GENEREL*****/
