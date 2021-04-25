@@ -52,13 +52,13 @@
 
 
             
-            <div id="splash_text">
-                <p class="text_1"><strong>This</strong> is me.<br>I study <strong>multimediadesign.</strong></p>
+            <div id="splash_text" class="fade_in">
+                <p id="splash_p"><strong>This</strong> is me.<br>I study <strong>multimediadesign.</strong></p>
                 <a href="index.html#about"><button>Intrigued?</button></a>
             </div>
         </section>
         <div id="separation_bar"></div>
-        <section id="about">
+        <section id="about" class="scrolltrigger_section">
             <div id="about_text">
             <h1>Who am I?</h1>
             <h2>...a curious multimediadesign student</h2>
@@ -83,7 +83,7 @@
         
             </section>
         <div id="separation_bar"></div>
-        <section id="resume">
+        <section id="resume" class="scrolltrigger_section">
             <div id="top">
             <h1>Résumé</h1>
             <a href="resume_sifflevajensen.pdf"><button>Download my full résumé<img src="illu_files/download_w.png" id="download"></button></a>
@@ -152,6 +152,8 @@
 
     <script src="script.js"></script>
     <script src="burgermenu.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.3.4/dist/ScrollTrigger.js"></script>
 
 </body>
 </html>

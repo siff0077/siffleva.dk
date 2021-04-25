@@ -4,6 +4,7 @@
   --white: #ffffff;
   --black: #000000;
   --darkopacity: #1f2109a9;
+  /*****************/
   --h1: 1.2rem;
   --h2: 1rem;
   --p: 0.8rem;
@@ -26,6 +27,24 @@
   --footer_a_1200px: 0.8em;
   --splash_text_1200px: 2.5em;
   --splash_button_1200px: 1.6em;
+  /*****************/
+  --h1_1400px: 2em;
+  --h2_1400px: 1.7em;
+  --button_1400px: 1.1em;
+  --p_1400px: 1.1em;
+  --a_1400px: 1.1em;
+  --footer_a_1400px: 1.1em;
+  --splash_text_1400px: 3em;
+  --splash_button_1400px: 1.5em;
+  /*****************/
+  --h1_1900px: 2.5em;
+  --h2_1900px: 1.8em;
+  --button_1900px: 1.4em;
+  --p_1900px: 1.4em;
+  --a_1900px: 1.4em;
+  --footer_a_1900px: 1.4em;
+  --splash_text_1900px: 4em;
+  --splash_button_1900px: 1.8em;
 }
 
 /***************************************/
@@ -620,6 +639,21 @@ footer #some_footer img {
 /***        OTHER PAGE SLUT          ***/
 /***************************************/
 
+/****************************************************************animation classes*********************************************************/
+
+.fade_in {
+  animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
 /****************************************************************MEDIA Q*********************************************************/
 
 /*flipped phone*/
@@ -825,6 +859,10 @@ footer #some_footer img {
     margin-bottom: 10vh;
   }
 
+  #portfolio footer h1 {
+    margin-bottom: 2vh;
+  }
+
   /*****WEBSITES*****/
   #websites #splash_text {
     max-width: 50%;
@@ -845,6 +883,10 @@ footer #some_footer img {
   /****OTHER****/
   #other #splash_text {
     max-width: 50%;
+  }
+
+  #other #content_box {
+    align-items: center;
   }
 }
 
@@ -920,6 +962,7 @@ footer #some_footer img {
 
   #burgermenu_links {
     max-width: 20%;
+    padding: 2vw;
   }
 
   #arrow {
@@ -1059,51 +1102,83 @@ footer #some_footer img {
 
 /*laptop 1440 x 900*/
 @media screen and (min-width: 1420px) {
+  /*****GENEREL*****/
+  #burgermenu_links {
+    max-width: 25%;
+  }
+
+  /*****FONTS******/
+  h1,
+  #burgermenu_links a {
+    font-size: var(--h1_1400px);
+  }
+
+  h2 {
+    font-size: var(--h2_1400px);
+  }
+
+  button {
+    font-size: var(--button_1400px);
+  }
+
+  p {
+    font-size: var(--p_1400px);
+  }
+
+  a,
+  footer a,
+  footer h1 {
+    font-size: var(--footer_a_1400px);
+  }
+
+  #frontpage #splash_text p {
+    font-size: var(--splash_text_1400px);
+  }
+
+  #frontpage #splash button {
+    font-size: var(--splash_button_1400px);
+  }
 }
 
-/*****GENEREL*****/
+/*1080p HD television 1920x1080*/
+@media screen and (min-width: 1900px) {
+  /*****GENEREL*****/
 
-/******FOOTER******/
+  /*****FONTS*******/
 
-/*****FONTS*******/
+  h1,
+  #burgermenu_links a {
+    font-size: var(--h1_1900px);
+  }
 
-/****FRONTPAGE*****/
+  h2 {
+    font-size: var(--h2_1900px);
+  }
 
-/*****PORTFOLIO***/
+  button {
+    font-size: var(--button_1900px);
+  }
 
-/*****WEBSITES*****/
+  p {
+    font-size: var(--p_1900px);
+  }
 
-/****GRAPHIC WORK*****/
+  a,
+  footer a,
+  footer h1 {
+    font-size: var(--footer_a_1900px);
+  }
 
-/*****PHOTOGRAPHY****/
+  #frontpage #splash_text p {
+    font-size: var(--splash_text_1900px);
+  }
 
-/****OTHER****/
+  #frontpage #splash button {
+    font-size: var(--splash_button_1900px);
+  }
 
-/* Create four equal columns that sits next to each other */
-/* #photography #project .column {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0 4px;
+  /*****PHOTOGRAPHY****/
+  #photography #project .photos {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
-
-#photography #project .column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-} */
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-/* @media screen and (max-width: 800px) {
-  #photography #project .column {
-    flex: 50%;
-    max-width: 50%;
-  }
-} */
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-/* @media screen and (max-width: 600px) {
-  #photography #project .column {
-    flex: 100%;
-    max-width: 100%;
-  }
-} */
