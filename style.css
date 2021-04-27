@@ -1,12 +1,15 @@
 :root {
   --dark: #1f2109;
-  --light: #595b46;
+  --medium: #707447;
+  --light: #73755c;
   --white: #ffffff;
   --black: #000000;
   --darkopacity: #1f2109a9;
   /*****************/
   --h1: 1.2rem;
   --h2: 1rem;
+  --h3: 0.8rem;
+  --li: 0.8rem;
   --p: 0.8rem;
   --a: 0.8rem;
   --button: 1rem;
@@ -15,6 +18,8 @@
   --h1_700px: 2em;
   --h2_700px: 1.4em;
   --button_700px: 1.4em;
+  --h3_700px: 1.2rem;
+  --li_700px: 1.2rem;
   --p_700px: 1.2em;
   --a_700px: 1.2em;
   --footer_a_700px: 1em;
@@ -24,6 +29,8 @@
   --button_1200px: 1em;
   --p_1200px: 0.8em;
   --a_1200px: 0.8em;
+  --h3_1200px: 0.8rem;
+  --li_1200px: 0.8rem;
   --footer_a_1200px: 0.8em;
   --splash_text_1200px: 2.5em;
   --splash_button_1200px: 1.6em;
@@ -33,6 +40,8 @@
   --button_1400px: 1.1em;
   --p_1400px: 1.1em;
   --a_1400px: 1.1em;
+  --h3_1400px: 1.1rem;
+  --li_1400px: 1.1rem;
   --footer_a_1400px: 1.1em;
   --splash_text_1400px: 3em;
   --splash_button_1400px: 1.5em;
@@ -42,6 +51,8 @@
   --button_1900px: 1.4em;
   --p_1900px: 1.4em;
   --a_1900px: 1.4em;
+  --h3_1900px: 1.4rem;
+  --li_1900px: 1.4rem;
   --footer_a_1900px: 1.4em;
   --splash_text_1900px: 4em;
   --splash_button_1900px: 1.8em;
@@ -67,12 +78,28 @@ h2 {
   font-size: var(--h2);
 }
 
+h3 {
+  color: var(black);
+  font-family: semplicitapro, sans-serif;
+  font-weight: 550;
+  font-style: normal;
+  font-size: var(--h3);
+}
+
 p {
   color: var(--black);
   font-family: semplicitapro, sans-serif;
   font-weight: 300;
   font-style: normal;
   font-size: var(--p);
+}
+
+li {
+  color: var(--white);
+  font-family: semplicitapro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: var(--li);
 }
 
 a {
@@ -442,18 +469,13 @@ footer #some_footer img {
   margin-right: 1vw;
 }
 
+#frontpage #about h1,
 #frontpage #about h2 {
-  color: var(--dark);
+  color: var(--medium);
 }
 
-#frontpage #resume #column h1 {
-  color: var(--white);
-}
-
-#frontpage #resume #column {
+#frontpage #resume {
   background-color: var(--light);
-  padding: 3vw;
-  margin-top: 5vh;
 }
 
 #frontpage #resume #top {
@@ -467,10 +489,48 @@ footer #some_footer img {
   color: var(--white);
 }
 
-#about,
-#resume {
-  margin-top: 5vh;
+#frontpage #resume h3 {
+  color: var(--white);
+}
+
+#frontpage #resume h2,
+#frontpage #resume h1 {
+  color: var(--dark);
+}
+
+#frontpage #resume #column,
+#frontpage #skills #column {
+  margin-bottom: 7vh;
+}
+
+#frontpage #resume #box,
+#frontpage #skills #box {
   margin-bottom: 5vh;
+}
+
+#frontpage #resume h2,
+#frontpage #skills h2 {
+  margin-bottom: 0;
+}
+
+#frontpage #resume h3,
+#frontpage #skills h3 {
+  margin-bottom: 0.5vh;
+}
+
+#frontpage #skills p {
+  margin-top: 0.5vh;
+}
+
+#frontpage #skills h1 {
+  color: var(--medium);
+}
+
+#about,
+#resume,
+#skills {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 /***************************************/
@@ -678,6 +738,8 @@ footer #some_footer img {
 
   button {
     padding: 1vw;
+    display: flex;
+    justify-content: center;
   }
 
   /******FOOTER******/
@@ -695,8 +757,6 @@ footer #some_footer img {
   footer #footer_logo {
     width: 20vw;
   }
-
-  /*****FONTS*******/
 
   /****FRONTPAGE*****/
 
@@ -729,13 +789,15 @@ footer #some_footer img {
     width: 4vw;
   }
 
-  #frontpage #resume_columns {
+  #frontpage #column #content {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-gap: 5vw;
-    margin-bottom: 5vh;
-    margin-top: 3vh;
   }
+
+  #frontpage #column #box {
+    max-width: 90%;
+  }
+
   /*****PORTFOLIO***/
 
   #portfolio #options {
@@ -820,8 +882,6 @@ footer #some_footer img {
 
   /******FOOTER******/
 
-  /*****FONTS*******/
-
   /****FRONTPAGE*****/
 
   #frontpage #about_contact {
@@ -834,8 +894,14 @@ footer #some_footer img {
     margin-top: 1vh;
   }
 
-  #frontpage #resume_columns {
-    margin-top: 0;
+  #frontpage #resume #column,
+  #frontpage #skills #column {
+    margin-bottom: 3vh;
+  }
+
+  #frontpage #resume #box,
+  #frontpage #skills #box {
+    margin-bottom: 2vh;
   }
 
   /*****PORTFOLIO***/
@@ -901,6 +967,14 @@ footer #some_footer img {
 
   h2 {
     font-size: var(--h2_700px);
+  }
+
+  h3 {
+    font-size: var(--h3_700px);
+  }
+
+  li {
+    font-size: var(--li_700px);
   }
 
   button {
@@ -1015,6 +1089,14 @@ footer #some_footer img {
     font-size: var(--h2_1200px);
   }
 
+  h3 {
+    font-size: var(--h3_1200px);
+  }
+
+  li {
+    font-size: var(--li_1200px);
+  }
+
   button {
     font-size: var(--button_1200px);
   }
@@ -1065,23 +1147,14 @@ footer #some_footer img {
     margin-left: 5vw;
   }
 
-  #frontpage #resume_columns {
-    grid-template-columns: 2fr 2fr 2fr 2fr;
+  #frontpage #resume #column #content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 2vw;
   }
 
-  #frontpage #resume #column {
-    padding: 2vw;
-  }
-
-  #frontpage #about,
-  #frontpage #resume {
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-  }
-
-  #frontpage #resume {
-    margin-bottom: 15vh;
+  #frontpage #skills #column #content {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 
   /*****PORTFOLIO***/
@@ -1115,6 +1188,14 @@ footer #some_footer img {
 
   h2 {
     font-size: var(--h2_1400px);
+  }
+
+  h3 {
+    font-size: var(--h3_1400px);
+  }
+
+  li {
+    font-size: var(--li_1400px);
   }
 
   button {
@@ -1153,6 +1234,14 @@ footer #some_footer img {
 
   h2 {
     font-size: var(--h2_1900px);
+  }
+
+  h3 {
+    font-size: var(--h3_1900px);
+  }
+
+  li {
+    font-size: var(--li_1900px);
   }
 
   button {
