@@ -161,7 +161,8 @@ section {
   color: var(--black);
 }
 
-#project_image {
+#project_image,
+#project_description {
   margin-top: 5vh;
   margin-bottom: 5vh;
 }
@@ -625,6 +626,19 @@ footer #some_footer img {
   padding: 2vh;
 }
 
+#graphic_work #project .graphic_projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1vw;
+  margin-bottom: 5vh;
+  margin-top: 10vh;
+}
+
+#graphic_work #project .graphic_projects img {
+  vertical-align: middle;
+  width: 100%;
+}
+
 /***************************************/
 /***        GRAPHIC WORK SLUT        ***/
 /***************************************/
@@ -649,13 +663,6 @@ footer #some_footer img {
   padding: 2vh;
 }
 
-#photography #project .row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
 #photography #project .photos {
   display: grid;
   grid-template-columns: 1fr;
@@ -840,6 +847,10 @@ footer #some_footer img {
 
   #graphic_work #splash_text {
     max-width: 60%;
+  }
+
+  #graphic_work #project .graphic_projects {
+    grid-template-columns: 2fr 2fr;
   }
 
   /*****PHOTOGRAPHY****/
@@ -1166,6 +1177,11 @@ footer #some_footer img {
     margin-bottom: 15vh;
   }
 
+  /*****GRAPHIC WORK****/
+  #graphic_worky #project .graphic_projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   /*****PHOTOGRAPHY****/
 
   #photography #project .photos {
@@ -1264,6 +1280,11 @@ footer #some_footer img {
 
   #frontpage #splash button {
     font-size: var(--splash_button_1900px);
+  }
+
+  /*****GRAPHIC WORK****/
+  #graphic_work #project .graphic_projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   /*****PHOTOGRAPHY****/
