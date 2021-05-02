@@ -678,6 +678,10 @@ footer #some_footer img {
   width: 100%;
 }
 
+.photo {
+  opacity: 0;
+}
+
 /***************************************/
 /***        PHOTOGRAPHY SLUT         ***/
 /***************************************/
@@ -834,6 +838,7 @@ footer #some_footer img {
   #websites #content_box {
     display: flex;
     flex-direction: row;
+    opacity: 0;
   }
 
   #websites #content_box #project_description {
@@ -873,6 +878,7 @@ footer #some_footer img {
   #other #content_box {
     display: flex;
     flex-direction: row;
+    opacity: 0;
   }
 
   #other #content_box #project_description {
