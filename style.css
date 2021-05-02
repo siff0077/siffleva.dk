@@ -203,10 +203,6 @@ a:hover {
   color: var(--light);
 }
 
-.trigger_section {
-  opacity: 0;
-}
-
 /***************************************/
 /***            HEADER               ***/
 /***************************************/
@@ -431,6 +427,7 @@ footer #some_footer img {
   position: relative;
   top: 60vh;
   left: 0vw;
+  max-width: 60%;
 }
 
 #frontpage #splash_text p {
@@ -536,6 +533,7 @@ footer #some_footer img {
 #skills {
   padding-top: 5vh;
   padding-bottom: 5vh;
+  opacity: 0;
 }
 
 /***************************************/
