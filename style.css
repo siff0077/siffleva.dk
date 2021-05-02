@@ -203,6 +203,10 @@ a:hover {
   color: var(--light);
 }
 
+.trigger_section {
+  opacity: 0;
+}
+
 /***************************************/
 /***            HEADER               ***/
 /***************************************/
@@ -1067,7 +1071,7 @@ footer #some_footer img {
     padding-right: 10vw;
   }
 
-  #seperation_bar {
+  #separation_bar {
     width: auto;
   }
 
@@ -1178,7 +1182,7 @@ footer #some_footer img {
   }
 
   /*****GRAPHIC WORK****/
-  #graphic_worky #project .graphic_projects {
+  #graphic_work #project .graphic_projects {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
