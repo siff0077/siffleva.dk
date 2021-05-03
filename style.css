@@ -427,7 +427,6 @@ footer #some_footer img {
   position: relative;
   top: 60vh;
   left: 0vw;
-  max-width: 60%;
 }
 
 #frontpage #splash_text p {
@@ -775,6 +774,7 @@ footer #some_footer img {
 
   #frontpage #splash_text {
     top: 55vh;
+    max-width: 60%;
   }
 
   #frontpage #about {
@@ -1173,7 +1173,7 @@ footer #some_footer img {
   }
 
   #frontpage #skills #column #content {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
   /*****PORTFOLIO***/
