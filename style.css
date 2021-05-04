@@ -416,7 +416,7 @@ footer #some_footer img {
 }
 
 #frontpage #splash {
-  background-image: url("images/frontpage.jpg");
+  background-image: url("images/edited-2.jpg");
   display: flex;
   flex-direction: column;
   background-position: 65%;
@@ -586,7 +586,7 @@ footer #some_footer img {
 /***************************************/
 
 #websites #splash {
-  background-image: url("images/splash_web.jpg");
+  background-image: url("images/edited-5.jpg");
   background-position: 50%;
 }
 
@@ -612,7 +612,7 @@ footer #some_footer img {
 /***************************************/
 
 #graphic_work #splash {
-  background-image: url("images/splash_graphic.jpg");
+  background-image: url("images/edited-1.jpg");
   width: auto;
   background-size: cover;
   background-position: 85%;
@@ -660,6 +660,10 @@ footer #some_footer img {
   width: 100%;
 }
 
+#graphic_work .photo {
+  opacity: 0;
+}
+
 /***************************************/
 /***        GRAPHIC WORK SLUT        ***/
 /***************************************/
@@ -669,7 +673,7 @@ footer #some_footer img {
 /***************************************/
 
 #photography #splash {
-  background-image: url("images/splash_photo.jpg");
+  background-image: url("images/edited-4.jpg");
   width: auto;
   background-size: cover;
   background-position: 40%;
@@ -730,7 +734,7 @@ footer #some_footer img {
 /***************************************/
 
 #other #splash {
-  background-image: url("images/splash_other.jpg");
+  background-image: url("images/edited-3.jpg");
   background-position: 70%;
 }
 
@@ -894,10 +898,6 @@ footer #some_footer img {
 
   #graphic_work #splash_text {
     max-width: 60%;
-  }
-
-  #graphic_work #project .graphic_projects {
-    grid-template-columns: 2fr 2fr;
   }
 
   #graphic_work .content {
@@ -1234,9 +1234,6 @@ footer #some_footer img {
   }
 
   /*****GRAPHIC WORK****/
-  #graphic_work #project .graphic_projects {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
 
   #graphic_work .content {
     -moz-column-count: 4;
@@ -1347,9 +1344,6 @@ footer #some_footer img {
   }
 
   /*****GRAPHIC WORK****/
-  #graphic_work #project .graphic_projects {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
 
   #graphic_work .content {
     -moz-column-count: 4;
