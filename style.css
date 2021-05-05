@@ -25,6 +25,8 @@
   --footer_a_700px: 1em;
   --portfolio_buttons_700px: 2em;
   /*****************/
+  --portfolio_buttons_1000px: 1.2em;
+  /*****************/
   --h1_1200px: 1.5em;
   --h2_1200px: 1.1em;
   --button_1200px: 1em;
@@ -229,7 +231,7 @@ header {
 #splash_logo {
   width: 30vw;
   position: fixed;
-  margin-top: 2vh;
+  top: 2vh;
   left: 4vw;
 }
 
@@ -367,6 +369,7 @@ footer {
   /* position: absolute; */
   padding-top: 5vh;
   padding-bottom: 5vh;
+  align-items: center;
 }
 
 footer a,
@@ -789,7 +792,8 @@ footer #some_footer img {
   }
 
   #splash_logo {
-    width: 20vw;
+    width: 17vw;
+    top: 5vh;
   }
 
   button {
@@ -860,6 +864,7 @@ footer #some_footer img {
   #portfolio button {
     height: 15vh;
     margin-top: 3vh;
+    width: 45vw;
   }
 
   /*****WEBSITES*****/
@@ -933,7 +938,8 @@ footer #some_footer img {
   /*****GENEREL*****/
 
   #splash_logo {
-    width: 30vw;
+    width: 20vw;
+    top: 2.5vh;
   }
 
   /******FOOTER******/
@@ -962,8 +968,17 @@ footer #some_footer img {
 
   /*****PORTFOLIO***/
 
-  #portfolio button {
+  #portfolio main {
+    margin-bottom: 10vh;
+  }
+
+  #portfolio #splash {
     height: 10vh;
+  }
+
+  #portfolio button {
+    height: 7vh;
+    margin-top: unset;
   }
 
   /*****WEBSITES*****/
@@ -1035,12 +1050,27 @@ footer #some_footer img {
 
 /*IPad horizontal*/
 @media screen and (min-width: 1000px) {
+  /*****GENEREL*****/
+
+  #splash_logo {
+    width: 20vw;
+    top: 4vh;
+  }
+
   /*****FOOTER*****/
 
   footer {
     align-items: center;
     padding-top: 3vh;
     padding-bottom: 3vh;
+  }
+
+  /*****PORTFOLIO*****/
+
+  #portfolio button {
+    font-size: var(--portfolio_buttons_1000px);
+    width: 35vw;
+    height: 9vh;
   }
 }
 
@@ -1050,7 +1080,7 @@ footer #some_footer img {
 
   #splash_logo {
     width: 15vw;
-    margin-top: 3.5vh;
+    top: 2.5vh;
   }
 
   #splash {
