@@ -23,6 +23,7 @@
   --p_700px: 1.2em;
   --a_700px: 1.2em;
   --footer_a_700px: 1em;
+  --portfolio_buttons_700px: 2em;
   /*****************/
   --h1_1200px: 1.5em;
   --h2_1200px: 1.1em;
@@ -34,6 +35,7 @@
   --footer_a_1200px: 0.8em;
   --splash_text_1200px: 2.5em;
   --splash_button_1200px: 1.6em;
+  --portfolio_buttons_1200px: 1.6em;
   /*****************/
   --h1_1400px: 2em;
   --h2_1400px: 1.7em;
@@ -45,6 +47,7 @@
   --footer_a_1400px: 1.1em;
   --splash_text_1400px: 3em;
   --splash_button_1400px: 1.5em;
+  --portfolio_buttons_1400px: 1.5em;
   /*****************/
   --h1_1900px: 2.5em;
   --h2_1900px: 1.8em;
@@ -56,6 +59,7 @@
   --footer_a_1900px: 1.4em;
   --splash_text_1900px: 4em;
   --splash_button_1900px: 1.8em;
+  --portfolio_buttons_1900px: 1.8em;
 }
 
 /***************************************/
@@ -177,7 +181,7 @@ img {
 
 #splash {
   width: auto;
-  height: 90vh;
+  min-height: 90vh;
   background-size: cover;
 }
 
@@ -207,6 +211,11 @@ a:hover {
 /***            HEADER               ***/
 /***************************************/
 
+header {
+  position: fixed;
+  z-index: 50;
+}
+
 #navigation {
   display: flex;
   flex-direction: row;
@@ -221,6 +230,7 @@ a:hover {
   width: 30vw;
   position: fixed;
   margin-top: 2vh;
+  left: 4vw;
 }
 
 /***burgermenu***/
@@ -228,7 +238,7 @@ a:hover {
 svg {
   position: fixed;
   cursor: pointer;
-  z-index: 1;
+  z-index: 100;
   max-width: 20vw;
   right: 1vw;
   margin-top: 1vh;
@@ -268,7 +278,7 @@ svg path {
   background-color: var(--light);
   max-width: 40%;
   height: auto;
-  z-index: 0;
+  /* z-index: 0; */
   position: fixed;
   right: 0;
   padding: 5vw;
@@ -314,7 +324,7 @@ svg path {
 .dropdown_portfolio {
   position: relative;
   display: inline-block;
-  z-index: 2;
+  /* z-index: 2; */
   margin-top: 1vh;
 }
 
@@ -324,7 +334,7 @@ svg path {
   background-color: var(--dark);
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 2;
+  /* z-index: 2; */
 }
 
 .dropdown_content a {
@@ -420,7 +430,7 @@ footer #some_footer img {
   display: flex;
   flex-direction: column;
   background-position: 65%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #frontpage #splash_text {
@@ -548,33 +558,23 @@ footer #some_footer img {
 }
 
 #portfolio #splash {
-  height: 12vh;
+  min-height: 7vh;
 }
 
-#portfolio_menu .nav_menu.active {
-  background: var(--dark);
-}
-
-#portfolio h1 {
-  color: var(--white);
-}
-
-#portfolio #options {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  grid-gap: 10vw;
-  margin-bottom: 5vh;
-  margin-top: 3vh;
-}
-
-#portfolio #option_box {
-  background-color: var(--dark);
+#portfolio main #content {
   display: flex;
-  justify-content: center;
-  min-height: 30vh;
+  flex-direction: column;
+  margin-bottom: 5vh;
+  margin-top: 10vh;
   align-items: center;
-  padding: 10px;
-  box-shadow: 2vw -1vh #1f21099c;
+}
+
+#portfolio button {
+  background-color: var(--dark);
+  color: var(--white);
+  margin-bottom: 5vh;
+  width: 70vw;
+  height: 10vh;
 }
 
 /***************************************/
@@ -857,20 +857,9 @@ footer #some_footer img {
 
   /*****PORTFOLIO***/
 
-  #portfolio #options {
-    grid-gap: 5vw;
-  }
-
-  #portfolio #option_box {
-    box-shadow: 1vw -2vh #1f21099c;
-  }
-
-  #portfolio section:nth-of-type(2) {
-    margin-top: 10vh;
-  }
-
-  #portfolio section:last-of-type {
-    margin-bottom: 15vh;
+  #portfolio button {
+    height: 15vh;
+    margin-top: 3vh;
   }
 
   /*****WEBSITES*****/
@@ -972,28 +961,9 @@ footer #some_footer img {
   }
 
   /*****PORTFOLIO***/
-  #portfolio #options {
-    grid-gap: 10vw;
-  }
 
-  #portfolio #option_box {
-    box-shadow: 2vw -2vh #1f21099c;
-  }
-
-  #portfolio h1 {
-    margin-bottom: 5vh;
-  }
-
-  #portfolio section:nth-of-type(2) {
-    margin-top: 5vh;
-  }
-
-  #portfolio section:last-of-type {
-    margin-bottom: 10vh;
-  }
-
-  #portfolio footer h1 {
-    margin-bottom: 2vh;
+  #portfolio button {
+    height: 10vh;
   }
 
   /*****WEBSITES*****/
@@ -1057,20 +1027,14 @@ footer #some_footer img {
   footer h1 {
     font-size: var(--footer_a_700px);
   }
+
+  #portfolio button {
+    font-size: var(--portfolio_buttons_700px);
+  }
 }
 
 /*IPad horizontal*/
 @media screen and (min-width: 1000px) {
-  /*****PORTFOLIO***/
-
-  #portfolio #options {
-    grid-gap: 5vw;
-  }
-
-  #portfolio section:nth-of-type(2) {
-    margin-top: 10vh;
-  }
-
   /*****FOOTER*****/
 
   footer {
@@ -1090,7 +1054,7 @@ footer #some_footer img {
   }
 
   #splash {
-    height: 70vh;
+    min-height: 70vh;
   }
 
   svg {
@@ -1186,6 +1150,10 @@ footer #some_footer img {
     font-size: var(--splash_button_1200px);
   }
 
+  #portfolio button {
+    font-size: var(--portfolio_buttons_1200px);
+  }
+
   /****FRONTPAGE*****/
 
   #frontpage #splash {
@@ -1222,15 +1190,6 @@ footer #some_footer img {
 
   #frontpage #skills #column #content {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  /*****PORTFOLIO***/
-
-  #portfolio section:nth-of-type(2) {
-    margin-top: 10vh;
-  }
-  #portfolio section:last-of-type {
-    margin-bottom: 15vh;
   }
 
   /*****GRAPHIC WORK****/
@@ -1296,6 +1255,9 @@ footer #some_footer img {
   #frontpage #splash button {
     font-size: var(--splash_button_1400px);
   }
+  #portfolio button {
+    font-size: var(--portfolio_buttons_1400px);
+  }
 }
 
 /*1080p HD television 1920x1080*/
@@ -1341,6 +1303,10 @@ footer #some_footer img {
 
   #frontpage #splash button {
     font-size: var(--splash_button_1900px);
+  }
+
+  #portfolio button {
+    font-size: var(--portfolio_buttons_1900px);
   }
 
   /*****GRAPHIC WORK****/
