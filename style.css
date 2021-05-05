@@ -201,14 +201,6 @@ img {
   margin-left: 2vw;
 }
 
-button:hover {
-  background: var(--light);
-}
-
-a:hover {
-  color: var(--light);
-}
-
 /***************************************/
 /***            HEADER               ***/
 /***************************************/
@@ -770,6 +762,34 @@ footer #some_footer img {
   }
   100% {
     opacity: 100;
+  }
+}
+
+button:hover,
+a:hover {
+  animation-name: kf_hover;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+#burgermenu_options a:hover {
+  background-color: var(--light);
+  animation-name: unset;
+  animation-duration: unset;
+  animation-fill-mode: unset;
+  animation-timing-function: unset;
+}
+
+@keyframes kf_hover {
+  0% {
+    transform: scale(0.95);
+  }
+  65% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1.2);
   }
 }
 
