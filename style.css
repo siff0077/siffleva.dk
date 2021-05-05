@@ -766,7 +766,8 @@ footer #some_footer img {
 }
 
 button:hover,
-a:hover {
+a:hover,
+svg:hover {
   animation-name: kf_hover;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -848,6 +849,7 @@ a:hover {
   #frontpage #about {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   #frontpage #about_elements {
@@ -965,11 +967,6 @@ a:hover {
   /******FOOTER******/
 
   /****FRONTPAGE*****/
-
-  #frontpage #about_contact {
-    flex-direction: column;
-    margin-top: 5vh;
-  }
 
   #frontpage #about_contact img {
     width: 5vw;
@@ -1221,6 +1218,11 @@ a:hover {
   #frontpage #about_elements {
     flex-direction: row;
     align-items: flex-start;
+  }
+
+  #frontpage #about_contact {
+    flex-direction: column;
+    margin-top: 5vh;
   }
 
   #frontpage #about_contact img {
